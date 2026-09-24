@@ -1,0 +1,457 @@
+/* =====================================
+        RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+        BODY
+===================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #25215c, transparent 40%),
+        radial-gradient(circle at bottom right, #32134f, transparent 40%),
+        #080812;
+
+    color: white;
+}
+
+
+/* =====================================
+        MAIN CONTAINER
+===================================== */
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+
+/* =====================================
+        CARD
+===================================== */
+
+.converter-card {
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    animation: cardAnimation 0.8s ease;
+}
+
+
+/* =====================================
+        CARD ANIMATION
+===================================== */
+
+@keyframes cardAnimation {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+        ICON
+===================================== */
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(130, 90, 255, 0.2);
+
+    font-size: 35px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+        HEADING
+===================================== */
+
+h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+        INPUT GROUP
+===================================== */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================
+        INPUT & SELECT
+===================================== */
+
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    color: white;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    outline: none;
+
+    border-color: #9b5cff;
+
+    box-shadow:
+        0 0 15px rgba(155, 92, 255, 0.3);
+}
+
+
+/* SELECT OPTION */
+
+.input-group select option {
+    background: #171722;
+
+    color: white;
+}
+
+
+/* =====================================
+        ERROR MESSAGE
+===================================== */
+
+.error-message {
+
+    min-height: 24px;
+
+    margin-bottom: 5px;
+
+    color: #ff5c70;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =====================================
+        BUTTONS
+===================================== */
+
+.button-group {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+
+.button-group button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* CONVERT BUTTON */
+
+.convert-btn {
+
+    background: #8b4dff;
+
+    color: white;
+
+    border: none;
+
+    box-shadow:
+        0 5px 20px rgba(139, 77, 255, 0.3);
+}
+
+
+.convert-btn:hover {
+
+    background: #a66aff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(139, 77, 255, 0.5);
+}
+
+
+/* RESET BUTTON */
+
+.reset-btn {
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #777;
+}
+
+
+.reset-btn:hover {
+
+    border-color: #ff5c70;
+
+    color: #ff5c70;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+        RESULTS
+===================================== */
+
+.results {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* RESULT BOX */
+
+.result-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+.result-box:hover {
+
+    transform: translateX(5px);
+
+    border-color: #8b4dff;
+
+    box-shadow:
+        0 5px 20px rgba(139, 77, 255, 0.15);
+}
+
+
+/* RESULT ICON */
+
+.result-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: rgba(139, 77, 255, 0.15);
+
+    font-size: 22px;
+}
+
+
+/* RESULT HEADING */
+
+.result-box h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+/* RESULT VALUE */
+
+.result-box p {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #a66aff;
+}
+
+
+/* =====================================
+        MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .converter-card {
+
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    h1 {
+
+        font-size: 26px;
+    }
+
+
+    .subtitle {
+
+        font-size: 14px;
+    }
+
+
+    .button-group {
+
+        flex-direction: column;
+    }
+
+
+    .button-group button {
+
+        width: 100%;
+    }
+
+}
